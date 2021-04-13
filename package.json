@@ -1,0 +1,17 @@
+{
+  "name": "The-Boring-Bot",
+  "version": "1.0.0",
+  "description": "USERNAME decided to create me, the bot for his 'group' The Boring Club, I am supposed to be a simple bot, but it all deppends on what USERNAME wants to do of me and what his friends and community ask him to add or try to add...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Made by \"USERNAME\"#0210",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}

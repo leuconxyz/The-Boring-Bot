@@ -1,0 +1,122 @@
+//This was the first simple build and commands to test the bot
+const express = require("express")
+const app = express()
+
+app.get("/", (req, res) => {
+  res.send("Welcome to Hell!")
+})
+
+app.listen(3000, () => {
+  console.log("Project dropping into the AO!")
+})
+
+let Discord = require("discord.js");
+let client = new Discord.Client();
+
+client.on("message", message => {
+  if (message.content === "ping") {
+    message.channel.send("pong 🏓");
+  }
+    //Requested by community
+  if (message.content === "pinga") {
+    message.channel.send("Esta vai pela casa, dá-lhe Zé!!! 🍻");
+  }
+   //Requested by community
+   if (message.content === "cona") {
+     message.channel.send(
+       "A casa é de Deus mas as porcas são nossas! Toma lá fiambre https: www.reddit.com/r/collegesluts"
+     );
+   }
+    //Requested by community
+   if (message.content === "fuck you") {
+     message.channel.send(
+       "https: d6ce0no7ktiq.cloudfront.net/images/stickers/663.png"
+     );
+   }
+    //Requested by community
+   if (message.content === "g2") {
+     message.channel.send(
+       "https: cdn.discordapp.com/attachments/371044619795824640/831575286867820554/EysoKptVcAEKAuV.png"
+     );
+   }
+    //Requested by community
+   if (message.content === "yuumi") {
+     message.channel.send(
+       "https: media.discordapp.net/attachments/371044619795824640/831575643275788319/EyHs10HWYAAUJu9.png"
+     );
+   }
+    //Requested by community
+   if (message.content === "hentai") {
+     message.channel.send("What the fuck did you just say? 😨");
+   }
+
+   if (message.content === "boring") {
+     let embed = new Discord.MessageEmbed()
+       .setTitle("Oh, hey! Want to join the club?")
+       .setDescription(
+         "If you wish to join The Boring Club you can come in anytime!"
+       )
+       .setImage(
+         "https: cdn.discordapp.com/icons/810882912378814494/7f24f420158864746927522e3707f1ff.png?size=256"
+       )
+       .setFooter("TBC Server: https: discord.gg/vzdUDfz6zk")
+       .setColor("#f20000");
+     message.channel.send(embed);
+   }
+    //Requested by community
+   if (message.content === "azeite") {
+    message.channel.send(
+       "Não me fodas o swag tropa! Olha que tás na minha zona! 🔪"
+     );
+   }
+    //Requested by community
+   if (message.content === "ad") {
+     let embed = new Discord.MessageEmbed()
+       .setTitle("Quick break for our sponsors! Have you heard of RSL? 🤯")
+       .setDescription(
+         "The realm of Teleria is under a Shadow cast by the Dark Lord Siroth in the east. You are one of many long-dead Telerian warriors to be resurrected by Teleria’s immortal guardian – the Arbiter – to stop it. Encounter an expansive range of strategy, innovative blended PvE and PvP gameplay modes, peerless character skill customization, and explosive clan-centered cooperative play. Join players from across the world and stamp your name among the heroes of Teleria. Intense PvP Arena Throw down the gauntlet and brawl with other players in fierce arena battles. Smoke your competition, climb Tiers, and earn valuable Rewards. Soar up the rankings to earn rarer Items and the respect of your enemies! 400+ Champions Victory awaits those who can rally the right Champions. Approach Orcs, Undead Hordes, and Lizard Men to unite as one. Secure the loyalty of Champions from 16 distinctive factions and stake your claim to honor. Epic Boss Battles Go up against fearsome bosses to earn loot, XP, and special Champion drops! Battle your way through the Fire Knight’s Castle, the Ice Golem’s Peak, the Spider’s Den, the Dragon’s Lair, and more. 1+ Million Builds Unlock a variety of Masteries and build your team your way. Level up your Champions to complement each other and craft a strategy to make the best use of them. Set yourself apart from your rivals and dominate!"
+       )
+       .setImage(
+         "https: www.gamerefinery.com/wp-content/uploads/2020/04/raid-shadow-legends.jpg"
+       )
+       .setFooter(
+         "Start playing now https: plarium.com/en/game/raid-shadow-legends/"
+       )
+       .setColor("#f20000");
+     message.channel.send(embed);
+   }
+  
+   if (message.content === "poland") {
+       let embed = new Discord.MessageEmbed()
+         .setTitle("We love Poland! 💞")
+         .setDescription(
+           "Here is our polish friend burning down his house with a DIY Flamethrower, very safe and controlled yes! 🤩"
+         )
+         .setImage(
+           "https: cdn.discordapp.com/attachments/665853986322120706/816280504222744636/nPiN4GWEAC.gif"
+         )
+         .setFooter("All bow before the powerful pyro! ❤️‍🔥")
+         .setColor("#f20000");
+       message.channel.send(embed);
+     }
+
+    //Requested by community
+   if (message.content === "league") {
+     let embed = new Discord.MessageEmbed()
+       .setTitle("Ah you wanna play league? Here is a foreign ad 🌟")
+       .setDescription(
+         "Olá amigos, vamos jogar? E se transferissem o \"League of Legends\" agora mesmo, começassem a jogar, e ficasem imediatamente viciados. Aprendem rápidamente como funciona, duas equipas de 5 jogadores tentam destruir a base da outra equipa, em combate num mapa cheio de lacaios e monstros, Talvez joguem com o Garen. Gostam do Garen? Toda a gente gosta do Garen! É facil matar adversários com o Garen. Não precisam de ser logo fantásticos porque o jogo junta os seus jogadores do mesmo nível, ou seja levam com smurfs, melhoram ao jogar cada vez mais e ao divertirem-se, e assim ganham o primeiro jogo de \"League of Legends\" na companhia de 4 desconhecidos, que bom! Mas lá no fundo teriam preferido contra inimigos na companhia de um grupo de amigos, podem ser um tanque de guerra russo, os vossos amigos podem ser curandeiros, arqueiros, assassinos, ou até magos, existem tantas funções disponiveis e prontas a serem usadas durante o jogo. O tempo passa, começam a perceber os outros champions como Lux e os seus feitiços irritantes, Darius que gosta de afundar nas pessoas (Lux), e Teemo o exemplo de tudo o que há de errado na civilização moderna, gostam destes campeões, cada um com o seu estilo, tambem começam a descobrir pormenores das histórias unicas de cada campeão, e da sua ligação com o estilo de combate. O universo entra bem de vocês mas no bom sentido. A certa altura descobrem jogos com classificações onde os resultados decidem a posição num sistema de Ligas e Divisões, apercebem-se fácilmente de que podem jogar e divertirem-se para todo o sempre. Mas com tantas coisas para experimentar, não há qualquer pressa. Isto é o \"League of Legends\" é competitivo, social e dinâmico, e depois de cada jogo só apetece clicar naquele botão grande que diz surrender. E isto se tiverem mesmo transferido o \"League of Legends\", a escolha é vossa!"
+       )
+       .setImage(
+         "https: cdn.discordapp.com/attachments/371044619795824640/831597506222620732/unknown.png"
+       )
+       .setFooter(
+         "Start playing now https: euw.leagueoflegends.com/en-us/"
+       )
+       .setColor("#f20000");
+     message.channel.send(embed);
+   }
+    
+ });
+
+ client.login("token");
