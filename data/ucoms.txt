@@ -1,0 +1,11 @@
+//This command was made with help from dfgd09#9200 🤍, this triggers a message when someone starts typing
+client.on('typingStart', (channel, user) => {
+  const embed = 'O que queres caralho? -> ' + user.username;
+    channel.send(embed);
+});
+
+//This command was made with help from dfgd09#9200 🤍, this triggers a message when someone starts typing and tags the user
+client.on('typingStart', (channel, user) => {
+  const embed = 'Can you please stop typing <@' + user.id + '>';
+    channel.send(embed);
+});
