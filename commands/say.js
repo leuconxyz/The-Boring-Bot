@@ -7,7 +7,7 @@ module.exports = {
     let embed = new Discord.MessageEmbed()
       .setDescription(`${splitted.join(' ')}`)
       .setColor('RANDOM');
-      message.delete();
+    message.delete();
     message.channel.send(embed);
   }
 }
