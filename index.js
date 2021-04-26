@@ -21,7 +21,7 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'))
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
 
@@ -93,6 +93,39 @@ client.on('message', message => {
   //Allows you to ban users
   if (command.toUpperCase() === ('ban'.toUpperCase())) {
     client.commands.get('ban').execute(message, args, Discord);
+  }
+
+  //Same as say command, but anonymous
+  if (command.toUpperCase() === ('anon'.toUpperCase())) {
+    client.commands.get('anon').execute(message, args, Discord);
+  }
+
+  if (command.toUpperCase() === ('poland'.toUpperCase())) {
+    client.commands.get('poland').execute(message, args, Discord);
+  }
+
+  if (command.toUpperCase() === ('rand'.toUpperCase())) {
+    client.commands.get('rand').execute(message, args, Discord);
+  }
+
+  if (command.toUpperCase() === ('love'.toUpperCase())) {
+    client.commands.get('love').execute(message, args, Discord);
+  }
+
+  if (command.toUpperCase() === ('fight'.toUpperCase())) {
+    client.commands.get('fight').execute(message, args, Discord);
+  }
+
+  if (command.toUpperCase() === ('flip'.toUpperCase())) {
+    client.commands.get('flip').execute(message, args, Discord);
+  }
+
+  if (command.toUpperCase() === ('spammer'.toUpperCase())) {
+    client.commands.get('spammer').execute(message, args, Discord);
+  }
+
+  if (command.toUpperCase() === ('8ball'.toUpperCase())) {
+    client.commands.get('8ball').execute(message, args, Discord);
   }
 
 });

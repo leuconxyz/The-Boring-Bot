@@ -15,7 +15,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "ffmpeg-static": "^4.3.0",
-    "yt-search": "^2.7.6",
+    "yt-search": "^2.8.0",
     "ytdl-core": "^4.5.0"
   }
 }
