@@ -1,7 +1,7 @@
 module.exports = {
   name: 'spammer',
   description: 'Spams the user X amount of times specified',
-  async execute(message, args, Discord) {
+  async execute(message, args, cmd, client, Discord) {
     let target = message.mentions.users.first();
     const splitted = message.content.split(' ');
     splitted.shift();
@@ -17,7 +17,7 @@ module.exports = {
     message.channel.send('Spammed <@' + target.id + '> ' + times + ' times 🤐');
     } else {
       message.delete();
-      message.channel.send('I don\'t think you should spam yourself... 🤔');
+      message.channel.send('I can\'t spam the void brother... 🤔');
     }
   }
 }

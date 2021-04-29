@@ -1,7 +1,7 @@
 module.exports = {
   name: 'flip',
   description: 'This will flip a coin for you!',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let coin = [
       'heads',
       'tails',

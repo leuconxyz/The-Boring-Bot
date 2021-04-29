@@ -1,7 +1,7 @@
 module.exports = {
   name: '8ball',
   description: 'Will help you with questions of life',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let sin = '<@' + message.author.id + '>'
     const splitted = message.content.split(' ');
     splitted.shift();

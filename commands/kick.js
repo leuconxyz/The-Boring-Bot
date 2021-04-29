@@ -1,7 +1,7 @@
 module.exports = {
   name: 'kick',
   description: 'Allows you to kick users',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let member = message.mentions.users.first();
     if (message.member.permissions.has('KICK_MEMBERS')) {
       if (member) {

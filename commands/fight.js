@@ -1,10 +1,8 @@
 module.exports = {
   name: 'fight',
   description: 'Creates a fight between you and the user you tag',
-  async execute(message, args, Discord) {
+  async execute(message, args, cmd, client, Discord) {
     let target = message.mentions.users.first();
-    if (target.id === message.author.id)
-      return message.channel.send("The only fighting with yourself is between your hand and your genitals 🤓");
     if (target) {
       let p1 = (' <@' + message.author.id + '>');
         let php1 = 100;
@@ -12,17 +10,22 @@ module.exports = {
         let php2 = 100;
       let round = 1;
       let attackMultiplier1 = 1;
-      let attackMultiplier2 = 1
-      const god = '640182216873345026';
+      let attackMultiplier2 = 1;
 
+      const god = '640182216873345026';
       let staff = [god, '298152950147317761'];
       if ( staff.includes(message.author.id)) {
         php1 = 150;
         attackMultiplier1 = 1.3;
-      } else if (staff.includes(target.id)) {
+      }
+      
+      if (staff.includes(target.id)) {
         php2 = 150;
         attackMultiplier2 = 1.3;
       }
+
+      console.log(attackMultiplier1);
+      console.log(attackMultiplier2);
       
       let fs = new Discord.MessageEmbed()
         .setTitle('Welcome to The Boring Arena! ⚔️')
@@ -152,7 +155,6 @@ module.exports = {
     }
   }
 }
-
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));

@@ -1,7 +1,7 @@
 module.exports = {
   name: 'invite',
   description: 'This command gives The Boring Club\'s server discord invite',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let embed = new Discord.MessageEmbed()
       .setTitle('Hey ' + message.author.username + ', nice to see you interested in us! ')
       .setImage('https://cdn.discordapp.com/icons/810882912378814494/7f24f420158864746927522e3707f1ff.png?size=256')

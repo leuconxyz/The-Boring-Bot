@@ -1,7 +1,7 @@
 module.exports = {
   name: 'love',
   description: 'Calculates love chances between you and another user',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let member = message.mentions.users.first();
     if (member) {
       let chance = Number((Math.floor(Math.random() * (100 - 0 + 1)) + 0));

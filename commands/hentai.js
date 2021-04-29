@@ -1,7 +1,7 @@
 module.exports = {
   name: 'hentai',
   description: 'Gives you... Free time options...',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let embed = new Discord.MessageEmbed()
       .setTitle('Here\'s something for you OwO')
       .addFields(

@@ -1,7 +1,7 @@
 module.exports = {
   name: 'ban',
   description: 'Allows you to ban users',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let member = message.mentions.users.first();
     if (message.member.permissions.has('BAN_MEMBERS')) {
       if (member) {

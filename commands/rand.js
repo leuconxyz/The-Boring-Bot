@@ -1,7 +1,7 @@
 module.exports = {
   name: 'rand',
   description: 'This will generate a number between 2 givens numbers by the user',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     const splitted = message.content.split(' ');
     splitted.shift();
     let first = Number(splitted.shift());

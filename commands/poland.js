@@ -1,7 +1,7 @@
 module.exports = {
   name: 'poland',
   description: 'Shows our love for Poland and their beautiful people, aka, Chris The Pyro',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let embed = new Discord.MessageEmbed()
       .setTitle('Poland? We love Poland 💞')
       .setDescription('Here is our polish friend burning down his house with a DIY Flamethrower, very safe and controlled yes! 🤩')

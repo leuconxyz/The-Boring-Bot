@@ -1,7 +1,7 @@
 module.exports = {
   name: 'fuckyou',
   description: 'Drops an image to express your attitude',
-  execute(message, args, Discord) {
+  execute(message, args, cmd, client, Discord) {
     let embed = new Discord.MessageEmbed()
       .setDescription('<@' + message.author.id + '> left this for you 💖')
       .setImage('https://d6ce0no7ktiq.cloudfront.net/images/stickers/663.png')
