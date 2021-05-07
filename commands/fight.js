@@ -1,5 +1,6 @@
 module.exports = {
   name: 'fight',
+  cooldown: 15,
   description: 'Creates a fight between you and the user you tag',
   async execute(message, args, cmd, client, Discord) {
     let target = message.mentions.users.first();

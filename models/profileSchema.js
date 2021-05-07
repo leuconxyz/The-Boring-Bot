@@ -5,6 +5,8 @@ const profileSchema = new mongoose.Schema({
   serverID: { type: String, require: true },
   coins: { type: Number, default: 350 },
   bank: { type: Number },
+  xp: { type: Number },
+  level: { type: Number },
   dbfood: { type: Number },
   dbminerals: { type: Number },
   dbearnings: { type: Number },

@@ -6,6 +6,8 @@ module.exports = async (client, discord, member) => {
     serverID: member.guild.id,
     coins: 350,
     bank: 0,
+    xp: 0,
+    level: 0,
     dbfood: 0,
     dbminerals: 0,
     dbearnings: 0,

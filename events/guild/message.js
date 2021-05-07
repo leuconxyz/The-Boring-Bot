@@ -16,6 +16,8 @@ module.exports = async (Discord, client, message) => {
         serverID: message.guild.id,
         coins: 350,
         bank: 0,
+        xp: 0,
+        level: 0,
         dbfood: 0,
         dbminerals: 0,
         dbearnings: 0,
@@ -24,6 +26,30 @@ module.exports = async (Discord, client, message) => {
     }
   } catch(err) {
     console.log(err);
+  }
+
+  let targetData;
+  let targetID = message.mentions.users.first();
+  if (targetID) {
+    try {
+      targetData = await profileModel.findOne({ userID: targetID.id });
+      if (!targetData) {
+        let target = await profileModel.create({
+          userID: targetID.id,
+          serverID: message.guild.id,
+          coins: 350,
+          bank: 0,
+          xp: 0,
+          level: 0,
+          dbfood: 0,
+          dbminerals: 0,
+          dbearnings: 0,
+        });
+        target.save();
+      }
+    } catch(err) {
+      console.log(err);
+    }
   }
 
   const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -57,7 +83,7 @@ module.exports = async (Discord, client, message) => {
   //end command cooldown
 
   try {
-    command.execute(message, args, cmd, client, Discord, profileData);
+    command.execute(message, args, cmd, client, Discord, profileData, targetData);
   } catch(err) {
     console.log(err);
   }
