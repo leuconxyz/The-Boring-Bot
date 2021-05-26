@@ -6,7 +6,7 @@ module.exports = {
 
     const splitted = message.content.split(' ');
     let handed = splitted.pop();
-    if (Number(handed) && handed > 1000 && handed <= profileData.coins) {
+    if (Number(handed) && handed >= 1000 && handed <= profileData.coins) {
       let topup = handed;
       let befcoins = profileData.coins;
       let aftcoins = Number(profileData.coins - topup);

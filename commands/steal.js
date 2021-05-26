@@ -1,7 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: 'steal',
-  cooldown: 300,
+  cooldown: 120,
   description: 'Let\s you steal from another player\'s pocket',
   async execute(message, args, cmd, client, Discord, profileData, targetData) {
     let target = message.mentions.users.first();
@@ -11,7 +11,7 @@ module.exports = {
     let stolen = Number(Math.floor(targetData.coins * (cres * 0.01)));
     let ncoins = Number(targetData.coins - stolen);
 
-    if(target && targetData.coins > 1000) {
+    if(target && targetData.coins > 100) {
 
       let rrez = new Discord.MessageEmbed()
         .setTitle('Someone has been robbed! 👁️')
@@ -51,7 +51,7 @@ module.exports = {
     } else if (target && targetData.coins < 100) {
       return message.channel.send('This person is so poor you felt bad for trying to steal them... 🤐');
     } else {
-      return message.channel.send('Maybe try to steal from someone or are you a magician? 🙄');
+      return message.channel.send('Hum... Can\'t find anything in empty pockets... 🙄');
     }
     
   }

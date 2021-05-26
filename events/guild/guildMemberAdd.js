@@ -11,6 +11,8 @@ module.exports = async (client, discord, member) => {
     dbfood: 0,
     dbminerals: 0,
     dbearnings: 0,
+    awon: 0,
+    dwon: 0,
   });
   profile.save();
 };

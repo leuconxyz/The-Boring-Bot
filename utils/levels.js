@@ -61,6 +61,16 @@ const plvl = [
   { name: '58', xp: 130000 },
   { name: '59', xp: 140000 },
   { name: '60', xp: 150000 },
+  { name: '61', xp: 150000 },
+  { name: '62', xp: 155000 },
+  { name: '63', xp: 160000 },
+  { name: '64', xp: 165000 },
+  { name: '65', xp: 170000 },
+  { name: '66', xp: 175000 },
+  { name: '67', xp: 180000 },
+  { name: '68', xp: 185000 },
+  { name: '69', xp: 190000 },
+  { name: '70', xp: 200000 },
 ];
 
 
@@ -69,8 +79,8 @@ module.exports = {
     for (const element of plvl) {
       if (xp < element.xp) {
         return Number(element.name) - 1
-      } else if (xp > 150000) {
-        return 60;
+      } else if (xp > 200000) {
+        return 70;
       }
     }
   }

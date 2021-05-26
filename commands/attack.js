@@ -57,6 +57,7 @@ module.exports = {
               dbearnings: eearnings,
               coins: ecoins,
               xp: exp,
+              awon: 1,
             },
             $set: {
               level: alevel,
@@ -101,6 +102,7 @@ module.exports = {
             $inc: {
               coins: edcoins,
               xp: edxp,
+              dwon: 1,
             },
             $set: {
               level: dlevel, 

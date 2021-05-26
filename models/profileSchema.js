@@ -10,6 +10,8 @@ const profileSchema = new mongoose.Schema({
   dbfood: { type: Number },
   dbminerals: { type: Number },
   dbearnings: { type: Number },
+  awon: { type: Number },
+  dwon: { type: Number },
 });
 
 const model = mongoose.model("ProfileModels", profileSchema);

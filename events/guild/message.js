@@ -21,6 +21,8 @@ module.exports = async (Discord, client, message) => {
         dbfood: 0,
         dbminerals: 0,
         dbearnings: 0,
+        awon: 0,
+        dwon: 0,
       });
       profile.save();
     }
@@ -44,6 +46,8 @@ module.exports = async (Discord, client, message) => {
           dbfood: 0,
           dbminerals: 0,
           dbearnings: 0,
+          awon: 0,
+          dwon: 0,
         });
         target.save();
       }
