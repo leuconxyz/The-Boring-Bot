@@ -1,8 +1,9 @@
+const profileModel = require("../models/profileSchema");
 module.exports = {
   name: 'fight',
   cooldown: 15,
   description: 'Creates a fight between you and the user you tag',
-  async execute(message, args, cmd, client, Discord) {
+  async execute(message, args, cmd, client, Discord, profileData, targetData) {
     let target = message.mentions.users.first();
     if (target) {
       let p1 = (' <@' + message.author.id + '>');
@@ -10,23 +11,18 @@ module.exports = {
       let p2 = (' <@' + target.id + '>');
         let php2 = 100;
       let round = 1;
-      let attackMultiplier1 = 1;
-      let attackMultiplier2 = 1;
+      let amp1 = Number(profileData.wepBonus) || 1;
+      let amp2 = Number(targetData.wepBonus) || 1;
 
       const god = '640182216873345026';
       let staff = [god, '298152950147317761'];
       if ( staff.includes(message.author.id)) {
         php1 = 150;
-        attackMultiplier1 = 1.3;
       }
       
       if (staff.includes(target.id)) {
         php2 = 150;
-        attackMultiplier2 = 1.3;
       }
-
-      console.log(attackMultiplier1);
-      console.log(attackMultiplier2);
       
       let fs = new Discord.MessageEmbed()
         .setTitle('Welcome to The Boring Arena! ⚔️')
@@ -91,8 +87,8 @@ module.exports = {
       //End of round comment list
 
       while (php1 > 0 && php2 > 0) {
-        let damage1 = Number(Math.floor(((Math.random() * (52 - 0 + 1)) + 0) * attackMultiplier1));
-        let damage2 = Number(Math.floor(((Math.random() * (52 - 0 + 1)) + 0) * attackMultiplier2));
+        let damage1 = Number(Math.floor(((Math.random() * (52 - 0 + 1)) + 0) * amp1));
+        let damage2 = Number(Math.floor(((Math.random() * (52 - 0 + 1)) + 0) * amp2));
         let rcom = rcoms[ Math.floor( Math.random() * rcoms.length) ];
         let hit1 = attack[ Math.floor( Math.random() * attack.length) ];
         let hit2 = attack[ Math.floor( Math.random() * attack.length) ];

@@ -12,6 +12,8 @@ const profileSchema = new mongoose.Schema({
   dbearnings: { type: Number },
   awon: { type: Number },
   dwon: { type: Number },
+  wepLevel: { type: Number },
+  wepBonus: { type: Number },
 });
 
 const model = mongoose.model("ProfileModels", profileSchema);

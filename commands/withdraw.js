@@ -6,11 +6,13 @@ module.exports = {
 
     const splitted = message.content.split(' ');
     let handed = splitted.pop();
-    console.log(handed);
-    if (Number(handed) && handed > 0 && handed <= profileData.bank) {
+    
+    let befcoins = Number(profileData.bank) || 0;
+
+    if (Number(handed) && handed > 0 && handed <= befcoins) {
       let topup = handed;
-      let befcoins = profileData.bank;
-      let aftcoins = Number(profileData.bank - topup);
+      
+      let aftcoins = Number(befcoins - topup);
 
       const response1 = await profileModel.findOneAndUpdate(
         {
@@ -25,9 +27,9 @@ module.exports = {
           },
         },
       );
-      return message.channel.send(`${message.author.username}, you have taken ${topup} **coins** from your bank <:BORS:837283775201148928>`);
+      return message.channel.send(`${message.author.username}, you have taken ${topup.toLocaleString()} **coins** from your bank <:BORS:837283775201148928>`);
     } else if (handed === 'all') {
-      let topup = profileData.bank;
+      let topup = befcoins;
 
       const response2 = await profileModel.findOneAndUpdate(
         {
@@ -43,7 +45,7 @@ module.exports = {
         },
       );
 
-      return message.channel.send(`${message.author.username}, you have taken ${topup} **coins** from your bank <:BORS:837283775201148928>`);
+      return message.channel.send(`${message.author.username}, you have taken ${topup.toLocaleString()} **coins** from your bank <:BORS:837283775201148928>`);
     } else {
       return message.channel.send('Please insert a number to withdraw or a valid amount... ❌')
     }

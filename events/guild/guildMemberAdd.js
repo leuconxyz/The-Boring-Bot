@@ -13,6 +13,8 @@ module.exports = async (client, discord, member) => {
     dbearnings: 0,
     awon: 0,
     dwon: 0,
+    wepLevel: 0,
+    wepBonus: 1,
   });
   profile.save();
 };

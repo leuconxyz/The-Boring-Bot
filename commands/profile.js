@@ -14,6 +14,8 @@ module.exports = {
     let bbank = profileData.bank || 0;
     let atkwon = profileData.awon || 0;
     let defwon = profileData.dwon || 0;
+    let wepLvl = profileData.wepLevel || 0;
+    let wepBon = profileData.wepBonus || 1;
 
     if(member) {
       let userprofile = new Discord.MessageEmbed()
@@ -21,7 +23,7 @@ module.exports = {
         .addFields(
           { name: `📝 Overall Report`, value: `• 🌟 Level: ${profileData.level} \n • ⭐ Total Exp: ${profileData.xp}` },
           { name: `💰 Finance Department Info`, value: `• <:BORS:837283775201148928> Coins in hand: ${bcoins.toLocaleString()} \n • <:BORS:837283775201148928> Coins in bank: ${bbank.toLocaleString()}` },
-          { name: `⚔️ War Commander Report`, value: `• 🐎 Attacks Won: ${atkwon.toLocaleString()} \n • 🛡️ Defenses Won: ${defwon.toLocaleString()}` },
+          { name: `⚔️ War Commander Report`, value: `• 🐎 Attacks Won: ${atkwon.toLocaleString()} \n • 🛡️ Defenses Won: ${defwon.toLocaleString()} \n • 🗡️ Weapon Level: ${wepLvl.toLocaleString()} \n • 🍀 Weapon Bonus: x${wepBon.toLocaleString()}` },
           { name: `📦 Vault Report`, value: `• 🌾 Food in Vault: ${eat.toLocaleString()} \n • ⛏️ Minerals in Vault: ${mine.toLocaleString()} \n • 💎 Gold & Silver in Vault: ${take.toLocaleString()}` },
         )
         .setColor('RANDOM');

@@ -6,10 +6,12 @@ module.exports = {
 
     const splitted = message.content.split(' ');
     let handed = splitted.pop();
-    if (Number(handed) && handed >= 1000 && handed <= profileData.coins) {
+
+    let befcoins = Number(profileData.coins) || 350;
+
+    if (Number(handed) && handed >= 1000 && handed <= befcoins) {
       let topup = handed;
-      let befcoins = profileData.coins;
-      let aftcoins = Number(profileData.coins - topup);
+      let aftcoins = Number(befcoins - topup);
 
       const response1 = await profileModel.findOneAndUpdate(
         {
@@ -24,9 +26,9 @@ module.exports = {
           },
         },
       );
-      return message.channel.send(`${message.author.username}, you have deposited ${topup} **coins** in your bank <:BORS:837283775201148928>`);
-    } else if (handed === 'all' && profileData.coins >= 1000) {
-      let topup = profileData.coins;
+      return message.channel.send(`${message.author.username}, you have deposited ${topup.toLocaleString()} **coins** in your bank <:BORS:837283775201148928>`);
+    } else if (handed === 'all' && befcoins >= 1000) {
+      let topup = befcoins;
 
       const response2 = await profileModel.findOneAndUpdate(
         {
@@ -42,7 +44,7 @@ module.exports = {
         },
       );
 
-      return message.channel.send(`${message.author.username}, you have deposited ${topup} **coins** in your bank <:BORS:837283775201148928>`);
+      return message.channel.send(`${message.author.username}, you have deposited ${topup.toLocaleString()} **coins** in your bank <:BORS:837283775201148928>`);
     } else {
       return message.channel.send('❌ Please insert a number to deposit or a valid amount above 1000$BORS... <:BORS:837283775201148928>')
     }

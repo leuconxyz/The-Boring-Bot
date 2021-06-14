@@ -23,6 +23,8 @@ module.exports = async (Discord, client, message) => {
         dbearnings: 0,
         awon: 0,
         dwon: 0,
+        wepLevel: 0,
+        wepBonus: 1,
       });
       profile.save();
     }
@@ -48,6 +50,8 @@ module.exports = async (Discord, client, message) => {
           dbearnings: 0,
           awon: 0,
           dwon: 0,
+          wepLevel: 0,
+          wepBonus: 1,
         });
         target.save();
       }
