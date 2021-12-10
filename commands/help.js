@@ -10,7 +10,7 @@ module.exports = {
         { name: 'General Commands 📚', value: '• b!ping \n • b!invite \n ' },
         { name: 'Admin Commands 👮', value: '• b!kick @user \n • b!ban @user \n • b!clear X \n' },
         { name: 'User Commands 🧙', value: '• b!profile\n '},
-        { name: 'Economy Commands 🤑', value: '• b!balance \n • b!deposit X \n • b!withdraw X \n • b!send @user coins X \n • b!steal @user \n • b!beg \n • b!attack @user \n ' },
+        { name: 'Economy Commands 🤑', value: '• b!balance \n • b!deposit X \n • b!withdraw X \n • b!send @user coins X \n • b!steal @user \n • b!beg \n • b!attack @user \n • b!upgrade \n ' },
         { name: 'Fun Commands 😄', value: '• b!say TEXT \n • b!fight @user \n • b!rand X Y \n • b!love @user \n • b!flip \n • b!8ball TEXT \n • b!boo \n ' },
         { name: 'NSFW Commands 🔞', value: '• b!hentai \n ' },
         { name: 'Community Commands 🎭', value: '• b!poland \n • b!fuckyou \n ' },

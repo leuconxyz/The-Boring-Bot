@@ -1,6 +1,6 @@
 module.exports = {
   name: 'anon',
-  description: 'This command makes the bot say whatever the user tells him to but without telling who said it',
+  description: 'This command makes the bot say whatever the user tells him to but without discriminating the user',
   execute(message, args, cmd, client, Discord) {
     const splitted = message.content.split(' ');
     splitted.shift();
