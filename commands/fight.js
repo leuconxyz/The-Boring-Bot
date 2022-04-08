@@ -63,6 +63,20 @@ module.exports = {
         ' cast a love spell on',
         ' grabbed the Frostmourne and hit',
         ' started spinning like Garen and charged into',
+        ' spit on the eye of',
+        ' threw a donut at',
+        ' stole an NFT from',
+        ' drained the balls of',
+        ' installed League for',
+        ' threw some robux at',
+        ' pulled out his dragon balls for',
+        ' jumped in the pooltec with',
+        ' broke his keyboard on',
+        ' pulled ass hair from',
+        ' showed his fire song to',
+        ' threw his airpods at',
+        ' anal probed',
+        ' sent a jar of mosquitoes to',
       ];
       //End of attack list
 
