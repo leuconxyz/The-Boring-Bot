@@ -1,0 +1,27 @@
+{
+  "name": "the-boring-bot",
+  "version": "1.0.0",
+  "description": "This is my discord bot, it is one of my little free time entertainments, feel free to have a look and take some inspiration from it, but please do not copy my project without crediting me.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leuconxyz/The-Boring-Bot.git"
+  },
+  "keywords": [],
+  "author": "\"USERNAME\"#0210 - The Boring Club",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leuconxyz/The-Boring-Bot/issues"
+  },
+  "homepage": "https://github.com/leuconxyz/The-Boring-Bot#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.5.0",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.23",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3"
+  }
+}
