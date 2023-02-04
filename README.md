@@ -3,3 +3,5 @@ This is my discord bot, it is one of my little free time entertainments, feel fr
 
 
 # [BEING UPDATED TO Discord.JS 14]
+
+# > WARNING: This is very delayed due to my lack of time at the moment due to college and work. Sorry...
